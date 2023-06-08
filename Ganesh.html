@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="index.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+}
+::-webkit-scrollbar{
+    width: 0.625rem;
+}
+::-webkit-scrollbar-track{
+    background-color: white;
+}
+::-webkit-scrollbar-thumb{
+    background-color:#0e59db;
+    border-radius: 5px;
+}
+.color {
+  background-color: #2a78ff;
+}
+.main {
+  background-color: #1d6df7;
+  flex-wrap: wrap;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+.left {
+  font-size: 25px;
+  color: rgb(240, 240, 242);
+}
+.left span {
+  font-size: 25px;
+
+  color: rgb(231, 6, 6) !important;
+}
+.center {
+}
+.center ul {
+  flex-wrap: wrap;
+  margin-top: 5px;
+  display: flex;
+}
+.center ul li {
+  color: rgb(237, 230, 230);
+  list-style: none;
+  /* padding-left: 20px;
+  padding-left: 30px; */
+  font-size: 17px;
+}
+.center ul li a{
+    color: rgb(237, 230, 230);
+    text-decoration: none;
+  padding-left: 20px;
+  padding-left: 30px;
+  font-size: 17px;
+}
+.center ul li a:hover {
+  color: red;
+}
+.right {
+}
+.right input {
+  outline: none;
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: none;
+}
+.right input:hover {
+  box-shadow: rgb(137, 165, 237) 3px 3px 6px 0px inset, rgba(122, 172, 228, 0.5) -3px -3px 6px 1px inset;
+}
+.btn-1 {
+  background-color: transparent;
+  padding: 5px 10px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: none;
+  color: rgb(245, 239, 239);
+  font-size: 18px;
+}
+.btn-1:hover {
+  color: red;
+}
+i:hover {
+  color: red;
+}
+.main-1 {
+    /* height: 164vh; */
+    padding-top: 222px;
+    padding-bottom: 87px;
+}
+.main-1-1 {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.container {
+  background-color: rgb(222, 220, 220);
+  /* border: 2px solid black; */
+  width: 300px;
+  text-align: center;
+  height: 428px;
+  margin-top: 59px;
+
+  /* box-shadow: 9px 11px 11px rgb(70, 69, 69); */
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.image img:hover {
+}
+.image img {
+  width: 280px;
+  height: 300px;
+  margin-top: 20px;
+  /* border-radius: 15px; */
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.button-1 {
+  margin: 30px 0;
+}
+.button-1 a {
+  background-color: #1d6df7;
+  padding: 7px 19px;
+  font-size: 20px;
+  border-radius: 5px;
+  color: white;
+}
+.button-1 a:hover {
+  background-color: white;
+  border: 2px solid #1d6df7;
+  color: #1d6df7;
+}
+@media screen and (min-width: 772px) {
+  .main-1 {
+    /* height: 114vh; */
+    padding-top: 138px;
+  }
+  .container {
+    background-color: rgb(222, 220, 220);
+    /* border: 2px solid black; */
+    width: 280px;
+    text-align: center;
+    height: 428px;
+    margin-top: 59px;
+  }
+  .image img {
+    width: 260px;
+    height: 300px;
+    margin-top: 20px;
+    border-radius: 15px;
+  }
+}
+@media screen and (min-width: 864px) {
+  .main-1 {
+    /* height: 68vh; */
+    padding-top: 138px;
+  }
+}
+@media screen and (min-width: 1102px) {
+  .main-1 {
+    /* height: 78vh; */
+    padding-top: 138px;
+  }
+  .container {
+    background-color: rgb(222, 220, 220);
+    /* border: 2px solid black; */
+    width: 360px;
+    text-align: center;
+    height: 468px;
+    margin-top: 59px;
+  }
+  .image img {
+    width: 320px;
+    height: 350px;
+    margin-top: 20px;
+    border-radius: 15px;
+  }
+}
+
+/* section-2 */
+.sec-2 {
+  background: rgb(210, 208, 208);
+  /* height: 370vh; */
+  padding: 64px 10px;
+}
+.sec-2-main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+.mony {
+  margin-top: 14px;
+  font-size: 26px;
+}
+.container-sec-2 {
+  background-color: rgb(236 230 230);
+  /* border: 2px solid black; */
+  width: 250px;
+  text-align: center;
+  height: 350px;
+  box-shadow: rgb(132, 162, 237) 3px 3px 6px 0px inset, rgba(145, 187, 235, 0.5) -3px -3px 6px 1px inset;
+  /* new-box-shadow */
+  /* box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; */
+  
+  /* new-2-box-shadow */
+  /* box-shadow: rgba(46, 78, 240, 0.4) 5px 5px, rgba(46, 124, 240, 0.3) 10px 10px, rgba(46, 95, 240, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px; */
+}
+.image-sec-2 img {
+  width: 200px;
+  height: 200px;
+  margin-top: 19px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+@media screen and (min-width: 543px) {
+  .sec-2 {
+    background: rgb(210, 208, 208);
+    /* height: 179vh; */
+    padding: 74px 10px;
+  }
+}
+@media screen and (min-width: 793px) {
+  .sec-2 {
+    background: rgb(210, 208, 208);
+    /* height: 150vh; */
+    padding: 84px 10px;
+  }
+}
+@media screen and (min-width: 1052px) {
+  .sec-2 {
+    background: rgb(210, 208, 208);
+    /* height: 120vh; */
+    padding: 84px 10px;
+  }
+  .container-sec-2 {
+  background-color: rgb(236 230 230);
+  /* border: 2px solid black; */
+  width: 230px;
+  text-align: center;
+  height: 350px;
+}
+.image-sec-2 img {
+  width: 190px;
+  height: 200px;
+  margin-top: 19px;
+}
+}
+@media screen and (min-width: 1310px) {
+  .sec-2 {
+    background: rgb(210, 208, 208);
+    /* height: 80vh; */
+    padding: 84px 10px;
+  }
+  .container-sec-2 {
+  background-color: rgb(236 230 230);
+  /* border: 2px solid black; */
+  width: 265px;
+  text-align: center;
+  height: 350px;
+}
+.image-sec-2 img {
+  width: 190px;
+  height: 200px;
+  margin-top: 19px;
+}
+
+
+}
+.image {
+  overflow: hidden;
+}
+
+img {
+  transition: transform 0.3s;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+.sec-4 {
+  margin-top: 5px;
+  background-color: rgb(210, 208, 208);
+}
+.section-4 {
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+.sec-4-main {
+}
+.heading-sec-4 {
+  color: #1d6df7;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+.pera-sec-4 {
+  width: 280px;
+  font-size: 18px;
+}
+
+.discount {
+  padding: 10px 0;
+  text-align: center;
+  color: #0e59db;
+}
+
+.footer-main {
+padding: 50px 0;
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+  background-color: rgb(210, 208, 208);
+
+}
+.footer-main-1 {
+}
+.footer-main-1 h2 {
+    margin-bottom: 10px;
+}
+.footer-main-1 li {
+ font-size: 18px;
+ line-height: 1.5;
+}
+
+.footer-button{
+    
+        background-color: #1d6df7;
+        padding: 7px 19px;
+        font-size: 20px;
+        border-radius: 5px;
+        color: white;
+        text-align: center;
+        margin-top: 10px;
+        border: none;
+    
+}
+      .footer-button:hover {
+        background-color: white;
+        border: 2px solid #1d6df7;
+        color: #1d6df7;
+      
+      }
+
+      input{
+        padding: 10px 30px;
+        outline: none;
+        border: none;
+      }
+      input:hover{
+  box-shadow: rgb(137, 165, 237) 3px 3px 6px 0px inset, rgba(122, 172, 228, 0.5) -3px -3px 6px 1px inset;
+        
+      }
+
+      .footer-copyright {
+        background-color: #645e5e;
+        padding: 20px;
+        text-align: center;
+      }
+      
+      .container-5 {
+        max-width: 960px;
+        margin: 0 auto;
+      }
+      
+      .footer-pera {
+        margin: 0;
+        font-size: 16px;
+        color: #faf8f8;
+      }
+      span{
+        font-size: large;
+        color
+        :red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="color">
+      <div class="main">
+        <div class="left">Ganesh <span>Dutt</span></div>
+        <div class="center">
+          <ul>
+            <li><a href="#home">HOME</a> </li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#mens">MENS</a></li>
+            <li><a href="#women">WOMENS</a></li>
+            <li><a href="#electronics">ELECTRONICS</a></li>
+            <li><a href="#footwears">FOOTWEARS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+        </div>
+        <div class="right">
+          <input type="search" placeholder="Search anything...!" />
+          <button class="btn-1">LOGIN</button>
+          <button class="btn-1">SIGNUP</button>
+          <i
+            class="fa-solid fa-user"
+            style="font-size: 20px; color: white; margin-right: 10px"
+          ></i>
+        </div>
+      </div>
+
+      <div id="home">
+      <section class="main-1">
+        <div class="main-1-1">
+          <div class="container">
+            <div class="image">
+              <img
+                src="https://cdn.pixabay.com/photo/2017/09/21/13/32/girl-2771936_640.jpg"
+                alt=""
+              />
+            </div>
+            <div class="button-1">
+              <a>Shop Now</a>
+            </div>
+          </div>
+          <div class="container">
+            <div class="image">
+              <img
+                src="https://cdn.pixabay.com/photo/2015/12/15/06/42/kids-1093758_640.jpg"
+                alt=""
+              />
+            </div>
+            <div class="button-1">
+              <a>Shop Now</a>
+            </div>
+          </div>
+          <div class="container">
+            <div class="image">
+              <img
+                src="https://cdn.pixabay.com/photo/2015/07/27/20/16/book-863418_1280.jpg"
+                alt=""
+              />
+            </div>
+            <div class="button-1">
+              <a>Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    </div>
+
+    <div id="about"></div>
+    <!-- section-2 -->
+    <div class="sec-2">
+      <div class="sec-2-main">
+        <div class="container-sec-2">
+          <div class="image-sec-2">
+            <img
+              src="https://cdn.pixabay.com/photo/2014/02/01/17/28/apple-256261_960_720.jpg"
+              alt=""
+            />
+          </div>
+          <p class="mony">&#8377; 24,999/-</p>
+          <div class="button-1">
+            <a>Shop Now</a>
+          </div>
+        </div>
+        <div class="container-sec-2">
+          <div class="image-sec-2">
+            <img
+              src="https://cdn.pixabay.com/photo/2021/02/03/11/32/gym-5977600_640.jpg"
+              alt=""
+            />
+          </div>
+          <p class="mony">&#8377; 12,999/-</p>
+          <div class="button-1">
+            <a>Shop Now</a>
+          </div>
+        </div>
+        <div class="container-sec-2">
+          <div class="image-sec-2">
+            <img
+              src="https://cdn.pixabay.com/photo/2019/10/21/08/08/exercise-machine-4565410_1280.jpg"
+              alt=""
+            />
+          </div>
+          <p class="mony">&#8377; 45,999/-</p>
+          <div class="button-1">
+            <a>Shop Now</a>
+          </div>
+        </div>
+        <div class="container-sec-2">
+          <div class="image-sec-2">
+            <img
+              src="https://cdn.pixabay.com/photo/2017/08/08/22/53/volleyball-2612968_1280.png"
+              alt=""
+            />
+          </div>
+          <p class="mony">&#8377; 78,999/-</p>
+          <div class="button-1">
+            <a>Shop Now</a>
+          </div>
+        </div>
+        <div class="container-sec-2">
+          <div class="image-sec-2">
+            <img
+              src="https://cdn.pixabay.com/photo/2017/07/02/19/24/dumbbells-2465478_640.jpg"
+              alt=""
+            />
+          </div>
+          <p class="mony">&#8377; 65,999/-</p>
+          <div class="button-1">
+            <a>Shop Now</a>
+          </div>
+        </div>
+        <div class="container-sec-2">
+          <div class="image-sec-2">
+            <img
+              src="https://cdn.pixabay.com/photo/2015/01/09/11/22/fitness-594143_640.jpg"
+              alt=""
+            />
+          </div>
+          <p class="mony">&#8377; 25,999/-</p>
+          <div class="button-1">
+            <a>Shop Now</a>
+          </div>
+        </div>
+        <div class="container-sec-2">
+          <div class="image-sec-2">
+            <img
+              src="https://cdn.pixabay.com/photo/2016/11/19/19/34/home-fitness-equipment-1840858_640.jpg"
+              alt=""
+            />
+          </div>
+          <p class="mony">&#8377; 30,999/-</p>
+          <div class="button-1">
+            <a>Shop Now</a>
+          </div>
+        </div>
+        <div class="container-sec-2">
+          <div class="image-sec-2">
+            <img
+              src="https://cdn.pixabay.com/photo/2014/06/23/19/45/barbell-375482_640.jpg"
+              alt=""
+            />
+          </div>
+          <p class="mony">&#8377; 14,999/-</p>
+          <div class="button-1">
+            <a>Shop Now</a>
+          </div>
+        </div>
+        <div class="container-sec-2">
+          <div class="image-sec-2">
+            <img
+              src="https://cdn.pixabay.com/photo/2018/04/30/01/20/kettlebell-3361559_640.jpg"
+              alt=""
+            />
+          </div>
+          <p class="mony">&#8377; 98,999/-</p>
+          <div class="button-1">
+            <a>Shop Now</a>
+          </div>
+        </div>
+        <div class="container-sec-2">
+          <div class="image-sec-2">
+            <img
+              src="https://cdn.pixabay.com/photo/2014/06/23/19/35/fitness-375472_640.jpg"
+              alt=""
+            />
+          </div>
+          <p class="mony">&#8377; 32,999/-</p>
+          <div class="button-1">
+            <a>Shop Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- section-4 -->
+
+    <div id="services">
+    <div class="sec-4">
+      <div class="section-4">
+        <div class="sec-4-main">
+          <p class="heading-sec-4">WorldWide Shiping</p>
+          <p class="pera-sec-4">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste,
+            porro laborum! ?
+          </p>
+        </div>
+        <div class="sec-4-main">
+          <p class="heading-sec-4">Best Quality</p>
+          <p class="pera-sec-4">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste,
+            porro laborum! ?
+          </p>
+        </div>
+        <div class="sec-4-main">
+          <p class="heading-sec-4">Best Offers</p>
+          <p class="pera-sec-4">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste,
+            porro laborum! ?
+          </p>
+        </div>
+        <div class="sec-4-main">
+          <p class="heading-sec-4">Secure Payments</p>
+          <p class="pera-sec-4">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste,
+            porro laborum! ?
+          </p>
+        </div>
+      </div>
+    </div>
+
+</div>
+    <div class="discount">
+        <h2>SALE UP TO 70% OFF FOR ALL CLOTHES & FASHION ITEMS, ON ALL BRANDS.</h2>
+    </div>
+
+  <div id="contact"></div>  
+    <footer>
+<div class="footer-main">
+    <div class="footer-main-1">
+        <h1>The best look anytime, <br> anywhere</h1>
+    </div>
+    <div class="footer-main-1">
+        <h2>For Womens</h2>
+        <li>Women Jeans</li>
+        <li>Tops and Shirt</li>
+        <li>Woman Jackets</li>
+        <li>Heels and Flats</li>
+        <li>Women Accessories
+        </li>
+    </div>
+    <div class="footer-main-1">
+        <h2>For Mens </h2>
+        <li>Men Jeans </li>
+        <li>Tshirt and Shirt</li>
+        <li>Men Jackets</li>
+        <li>Shoes and Sleepers</li>
+        <li>Men Accessories</li>
+     
+    </div>
+    <div class="footer-main-1">
+        <h2>Subscribe</h2>
+        <input type="search" placeholder="Enter Your Email"> 
+        <br>
+        <button class="footer-button"> Subscribe</button>
+    </div>
+</div>
+
+
+<div class="footer-copyright">
+    
+        <div class="container-5">
+          <p class="footer-pera">&copy; 2023 Your Company. All rights reserved.</p>
+          <p class="footer-pera" style="box-shadow: rgba(46, 88, 240, 0.4) 0px 5px, rgba(46, 146, 240, 0.3) 0px 10px, rgba(51, 61, 95, 0.2) 0px 15px, rgba(72, 90, 162, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;">
+            This website created by <span style="color:white">Ganesh </span>  <span>Dutt</span> 
+          </p>
+        </div>
+      
+      
+</div>
+    </footer>
+
+  </body>
+</html>
